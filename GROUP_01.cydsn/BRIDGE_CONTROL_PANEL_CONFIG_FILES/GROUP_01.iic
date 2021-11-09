@@ -1,0 +1,2 @@
+w 08 00 01 02 03 04 05 06 p
+r 08 x x x @1temp @0temp @1ldr @0ldr p 
