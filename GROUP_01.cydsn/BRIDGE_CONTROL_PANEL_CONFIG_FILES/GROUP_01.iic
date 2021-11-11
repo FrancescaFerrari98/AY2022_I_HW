@@ -1,6 +1,9 @@
 ;Selezionare una riga alla volta e premere Send. Nella prima riga viene settato
-;il periodo del timer (nel control register 1), nella seconda viene settato
+;il periodo del timer (nel control register 1) usando 02 in quanto volevamo un periodo di 2 ms, nella seconda viene settato
 ;il control register 0 (numero di campioni da usare per la media + status bits)
+; il valore 17 inserito nella seconda riga di codice è la trasposizione in HEX di 010111
+; in cui (partendo a leggere da destra) i primi due 1 sono per gli status bit
+; mentre i restanti quattro bit (0101) servono a stabilire il numero dei campioni (5 in questo caso)
 w 08 01 02 p
 w 08 00 17 p
 w 08 00 p

@@ -57,7 +57,7 @@ int main(void)
             //informazioni sul numero di campioni che vogliamo usare per la media
             SAMPLE_SIZE = (slaveBuffer[0] & 0b00111100);
             //i bit ottenuti con la maschera vengono spostati verso destra di 2 in modo da
-            //poter leggere il numero di campioni
+            //poter leggere correttamente il numero di campioni
             SAMPLE_SIZE_shift = SAMPLE_SIZE>>2;
             //il numero di campioni viene salvato nella variabile conv_shift
             conv_shift = SAMPLE_SIZE_shift;
