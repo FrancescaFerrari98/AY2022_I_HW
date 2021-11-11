@@ -1,2 +1,9 @@
-w 08 00 01 02 03 04 05 06 p
+;Selezionare una riga alla volta e premere Send. Nella prima riga viene settato
+;il periodo del timer (nel control register 1), nella seconda viene settato
+;il control register 0 (numero di campioni da usare per la media + status bits)
+w 08 01 02 p
+w 08 00 17 p
+w 08 00 p
+;Selezionare la riga sottostante e premere Repeat per visualizzare l'andamento
+;dei valori campionati dai sensori su un grafico
 r 08 x x x @1temp @0temp @1ldr @0ldr p 
